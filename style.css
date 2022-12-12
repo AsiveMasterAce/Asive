@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root {
-    --main-color: #FAAB78;
+    --main-color: #e63946;
 }
 
 * {
@@ -12,7 +12,7 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
+    /* text-transform: capitalize;  */
     transition: all .2s linear;
     line-height: 1.5;
 }
@@ -24,7 +24,7 @@ html {
 }
 
 body {
-    background: #fefae0;
+    background: #f1faee;
     padding-left: 30rem;
 }
 
@@ -53,6 +53,7 @@ section {
     color: #fff;
     cursor: pointer;
     font-size: 1.7rem;
+    text-transform: uppercase;
 }
 
 .btn:hover {
@@ -93,6 +94,8 @@ header .navbar a {
     font-size: 2rem;
     color: #fff;
     margin: 2rem 0;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 header .navbar a:hover {
@@ -188,7 +191,7 @@ header .follow a:hover {
 .home .content h3 {
     font-size: 4.5rem;
     color: #111;
-    text-transform: uppercase;
+    /*text-transform: ; */
 }
 
 .home .content h3 span {
@@ -584,6 +587,10 @@ header .follow a:hover {
 .contact .row form .btn {
     margin-top: 0;
     margin-bottom: 1.5rem;
+}
+
+.contact .row .contact_img {
+    width: 60%;
 }
 
 .footer {
