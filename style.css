@@ -663,7 +663,9 @@ header .follow a:hover {
     header {
         width: 100%;
     }
-
+    .mobi-display{
+        display: none;
+    }
     .experience .box-container .box {
         padding-right: 0;
     }
