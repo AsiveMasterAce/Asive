@@ -1,36 +1,54 @@
-let menu = document.querySelector('#menu-bars');
-let header = document.querySelector('header');
+// Mobile menu toggle
+const menuBtn  = document.getElementById('menu-btn');
+const menuIcon = document.getElementById('menu-icon');
+const mobileMenu = document.getElementById('mobile-menu');
+const navbar = document.getElementById('navbar');
 
-menu.onclick = () => {
-    menu.classList.toggle('fa-times');
-    header.classList.toggle('active');
+function closeMobileMenu() {
+    mobileMenu.classList.add('hidden');
+    menuIcon.classList.replace('fa-times', 'fa-bars');
 }
 
-window.onscroll = () => {
-    menu.classList.remove('fa-times');
-    header.classList.remove('active');
-}
-
-let cursor1 = document.querySelector('.cursor-1');
-let cursor2 = document.querySelector('.cursor-2');
-
-window.onmousemove = (e) => {
-    cursor1.style.top = e.pageY + 'px';
-    cursor1.style.left = e.pageX + 'px';
-    cursor2.style.top = e.pageY + 'px';
-    cursor2.style.left = e.pageX + 'px';
-}
-
-document.querySelectorAll('a').forEach(links => {
-
-    links.onmouseenter = () => {
-        cursor1.classList.add('active');
-        cursor2.classList.add('active');
+menuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    if (isOpen) {
+        closeMobileMenu();
+    } else {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.classList.replace('fa-bars', 'fa-times');
     }
-
-    links.onmouseleave = () => {
-        cursor1.classList.remove('active');
-        cursor2.classList.remove('active');
-    }
-
 });
+
+// Close mobile menu when a link is clicked
+document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+});
+
+// Close mobile menu and add shadow on scroll
+window.addEventListener('scroll', () => {
+    closeMobileMenu();
+    if (window.scrollY > 20) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Highlight active nav link on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navLinks.forEach(link => {
+                link.classList.toggle(
+                    'active',
+                    link.getAttribute('href') === '#' + entry.target.id
+                );
+            });
+        }
+    });
+}, { threshold: 0.4 });
+
+sections.forEach(section => observer.observe(section));
