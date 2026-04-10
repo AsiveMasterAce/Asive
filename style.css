@@ -22,3 +22,8 @@ html {
     color: #20373b; /* primary-800 */
 }
 
+/* Lock page scroll while modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+

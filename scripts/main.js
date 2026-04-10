@@ -52,3 +52,67 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.4 });
 
 sections.forEach(section => observer.observe(section));
+
+// Technical approach modal interactions
+const techModal = document.getElementById('tech-modal');
+const openTechModalBtn = document.getElementById('open-tech-modal');
+const closeTechModalBtn = document.getElementById('close-tech-modal');
+const techModalBackdrop = document.getElementById('tech-modal-backdrop');
+const techModalPanel = document.getElementById('tech-modal-panel');
+
+let lastFocusedElement = null;
+let closingTimeoutId = null;
+
+if (techModal && openTechModalBtn && closeTechModalBtn && techModalBackdrop && techModalPanel) {
+    const openTechModal = () => {
+        if (closingTimeoutId) {
+            clearTimeout(closingTimeoutId);
+            closingTimeoutId = null;
+        }
+
+        lastFocusedElement = document.activeElement;
+        techModal.classList.remove('hidden');
+        techModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+
+        requestAnimationFrame(() => {
+            techModalBackdrop.classList.remove('opacity-0');
+            techModalBackdrop.classList.add('opacity-100');
+
+            techModalPanel.classList.remove('opacity-0', 'translate-y-6', 'sm:translate-y-8', 'scale-[0.98]');
+            techModalPanel.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+
+            closeTechModalBtn.focus();
+        });
+    };
+
+    const closeTechModal = () => {
+        techModalBackdrop.classList.remove('opacity-100');
+        techModalBackdrop.classList.add('opacity-0');
+
+        techModalPanel.classList.remove('opacity-100', 'translate-y-0', 'scale-100');
+        techModalPanel.classList.add('opacity-0', 'translate-y-6', 'sm:translate-y-8', 'scale-[0.98]');
+
+        techModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+
+        closingTimeoutId = window.setTimeout(() => {
+            techModal.classList.add('hidden');
+            closingTimeoutId = null;
+
+            if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+                lastFocusedElement.focus();
+            }
+        }, 300);
+    };
+
+    openTechModalBtn.addEventListener('click', openTechModal);
+    closeTechModalBtn.addEventListener('click', closeTechModal);
+    techModalBackdrop.addEventListener('click', closeTechModal);
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !techModal.classList.contains('hidden')) {
+            closeTechModal();
+        }
+    });
+}
