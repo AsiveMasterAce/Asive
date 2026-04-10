@@ -55,7 +55,6 @@ sections.forEach(section => observer.observe(section));
 
 // Technical approach modal interactions
 const techModal = document.getElementById('tech-modal');
-const openTechModalBtn = document.getElementById('open-tech-modal');
 const closeTechModalBtn = document.getElementById('close-tech-modal');
 const techModalBackdrop = document.getElementById('tech-modal-backdrop');
 const techModalPanel = document.getElementById('tech-modal-panel');
@@ -63,7 +62,7 @@ const techModalPanel = document.getElementById('tech-modal-panel');
 let lastFocusedElement = null;
 let closingTimeoutId = null;
 
-if (techModal && openTechModalBtn && closeTechModalBtn && techModalBackdrop && techModalPanel) {
+if (techModal && closeTechModalBtn && techModalBackdrop && techModalPanel) {
     const openTechModal = () => {
         if (closingTimeoutId) {
             clearTimeout(closingTimeoutId);
@@ -106,7 +105,14 @@ if (techModal && openTechModalBtn && closeTechModalBtn && techModalBackdrop && t
         }, 300);
     };
 
-    openTechModalBtn.addEventListener('click', openTechModal);
+    document.addEventListener('click', (event) => {
+        const openButton = event.target.closest('[id="open-tech-modal"], [data-modal-target="tech-modal"]');
+        if (openButton) {
+            event.preventDefault();
+            openTechModal();
+        }
+    });
+
     closeTechModalBtn.addEventListener('click', closeTechModal);
     techModalBackdrop.addEventListener('click', closeTechModal);
 
