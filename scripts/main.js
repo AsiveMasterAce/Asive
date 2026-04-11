@@ -53,72 +53,122 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach(section => observer.observe(section));
 
-// Technical approach modal interactions
-const techModal = document.getElementById('tech-modal');
-const closeTechModalBtn = document.getElementById('close-tech-modal');
-const techModalBackdrop = document.getElementById('tech-modal-backdrop');
-const techModalPanel = document.getElementById('tech-modal-panel');
-
+// Technical approach modal interactions (supports multiple modals)
+const modals = document.querySelectorAll('[data-modal]');
+const closingTimeoutByModal = new WeakMap();
+let activeModal = null;
 let lastFocusedElement = null;
-let closingTimeoutId = null;
 
-if (techModal && closeTechModalBtn && techModalBackdrop && techModalPanel) {
-    const openTechModal = () => {
-        if (closingTimeoutId) {
-            clearTimeout(closingTimeoutId);
-            closingTimeoutId = null;
-        }
-
-        lastFocusedElement = document.activeElement;
-        techModal.classList.remove('hidden');
-        techModal.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('modal-open');
-
-        requestAnimationFrame(() => {
-            techModalBackdrop.classList.remove('opacity-0');
-            techModalBackdrop.classList.add('opacity-100');
-
-            techModalPanel.classList.remove('opacity-0', 'translate-y-6', 'sm:translate-y-8', 'scale-[0.98]');
-            techModalPanel.classList.add('opacity-100', 'translate-y-0', 'scale-100');
-
-            closeTechModalBtn.focus();
-        });
+function getModalParts(modal) {
+    return {
+        backdrop: modal.querySelector('[data-modal-backdrop]'),
+        panel: modal.querySelector('[data-modal-panel]'),
+        closeButton: modal.querySelector('[data-modal-close]')
     };
+}
 
-    const closeTechModal = () => {
-        techModalBackdrop.classList.remove('opacity-100');
-        techModalBackdrop.classList.add('opacity-0');
+function openModal(modal) {
+    const { backdrop, panel, closeButton } = getModalParts(modal);
+    if (!backdrop || !panel) {
+        return;
+    }
 
-        techModalPanel.classList.remove('opacity-100', 'translate-y-0', 'scale-100');
-        techModalPanel.classList.add('opacity-0', 'translate-y-6', 'sm:translate-y-8', 'scale-[0.98]');
+    const existingTimer = closingTimeoutByModal.get(modal);
+    if (existingTimer) {
+        clearTimeout(existingTimer);
+        closingTimeoutByModal.delete(modal);
+    }
 
-        techModal.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('modal-open');
+    if (activeModal && activeModal !== modal) {
+        activeModal.classList.add('hidden');
+        activeModal.setAttribute('aria-hidden', 'true');
+    }
 
-        closingTimeoutId = window.setTimeout(() => {
-            techModal.classList.add('hidden');
-            closingTimeoutId = null;
+    lastFocusedElement = document.activeElement;
+    activeModal = modal;
+    modal.classList.remove('hidden');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+
+    requestAnimationFrame(() => {
+        backdrop.classList.remove('opacity-0');
+        backdrop.classList.add('opacity-100');
+
+        panel.classList.remove('opacity-0', 'translate-y-6', 'sm:translate-y-8', 'scale-[0.98]');
+        panel.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+
+        if (closeButton) {
+            closeButton.focus();
+        }
+    });
+}
+
+function closeModal(modal) {
+    const { backdrop, panel } = getModalParts(modal);
+    if (!backdrop || !panel) {
+        return;
+    }
+
+    backdrop.classList.remove('opacity-100');
+    backdrop.classList.add('opacity-0');
+
+    panel.classList.remove('opacity-100', 'translate-y-0', 'scale-100');
+    panel.classList.add('opacity-0', 'translate-y-6', 'sm:translate-y-8', 'scale-[0.98]');
+
+    modal.setAttribute('aria-hidden', 'true');
+
+    const timeoutId = window.setTimeout(() => {
+        modal.classList.add('hidden');
+        closingTimeoutByModal.delete(modal);
+
+        if (activeModal === modal) {
+            activeModal = null;
+            document.body.classList.remove('modal-open');
 
             if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
                 lastFocusedElement.focus();
             }
-        }, 300);
-    };
+        }
+    }, 300);
 
+    closingTimeoutByModal.set(modal, timeoutId);
+}
+
+if (modals.length > 0) {
     document.addEventListener('click', (event) => {
-        const openButton = event.target.closest('[id="open-tech-modal"], [data-modal-target="tech-modal"]');
+        const openButton = event.target.closest('[data-modal-target]');
         if (openButton) {
-            event.preventDefault();
-            openTechModal();
+            const targetId = openButton.getAttribute('data-modal-target');
+            const targetModal = targetId ? document.getElementById(targetId) : null;
+
+            if (targetModal) {
+                event.preventDefault();
+                openModal(targetModal);
+            }
+            return;
+        }
+
+        const closeButton = event.target.closest('[data-modal-close]');
+        if (closeButton) {
+            const modal = closeButton.closest('[data-modal]');
+            if (modal) {
+                closeModal(modal);
+            }
+            return;
+        }
+
+        const backdrop = event.target.closest('[data-modal-backdrop]');
+        if (backdrop) {
+            const modal = backdrop.closest('[data-modal]');
+            if (modal) {
+                closeModal(modal);
+            }
         }
     });
 
-    closeTechModalBtn.addEventListener('click', closeTechModal);
-    techModalBackdrop.addEventListener('click', closeTechModal);
-
     document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && !techModal.classList.contains('hidden')) {
-            closeTechModal();
+        if (event.key === 'Escape' && activeModal && !activeModal.classList.contains('hidden')) {
+            closeModal(activeModal);
         }
     });
 }
