@@ -154,14 +154,14 @@
 
                 <!-- Text content -->
                 <div class="flex-1 text-center lg:text-left">
-                    <p class="text-primary-500 font-semibold text-lg mb-3 tracking-wide">Hi There 👋</p>
+                    <p class="text-primary-500 font-semibold text-lg mb-3 tracking-wide">Hi There</p>
                     <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-primary-800 leading-tight mb-4">
                         I Am <span class="text-primary-500">Asive</span>
                     </h1>
                     <p class="text-xl sm:text-2xl text-primary-600 font-medium mb-6">Software Developer</p>
                     <p class="text-primary-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-                        Building exciting, scalable, feasible projects that solve real-life problems — big to small —
-                        empowering your web identity.
+                        I build production-ready .NET applications, dashboards, and workflow systems that solve real
+                        business problems.
                     </p>
                     <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
                         <a href="#about"
@@ -177,10 +177,30 @@
 
                 <!-- Hero image -->
                 <div class="flex-1 flex justify-center lg:justify-end">
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-primary-300/35 rounded-full blur-3xl scale-110"></div>
-                        <img src="img/dev.png" alt="Asive Nzwana software developer"
-                            class="relative w-64 sm:w-80 lg:w-96 object-contain drop-shadow-2xl">
+                    <div class="relative group">
+                        <!-- Ambient Dual-Tone Glow (Teal + Warm Accent) -->
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-primary-400/25 via-primary-300/35 to-primary-500/25 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
+
+                        <!-- Main Framed Card with smooth rounded corners & subtle glass border -->
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/70 bg-white/30 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.01]">
+                            <img src="img/asive-avatar.png" alt="Cartoon avatar illustration of Asive Nzwana"
+                                class="w-64 sm:w-80 lg:w-96 object-contain block">
+                        </div>
+
+                        <!-- Floating Badge: Status (Bottom-Left) -->
+                        <div class="absolute -bottom-3 -left-3 sm:-left-5 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-lg border border-primary-200/60 flex items-center gap-2.5 transition-transform duration-300 hover:-translate-y-1">
+                            <span class="relative flex h-2.5 w-2.5">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                            </span>
+                            <span class="text-xs font-semibold text-primary-800 tracking-tight">Available for Work</span>
+                        </div>
+
+                        <!-- Floating Badge: Tech Stack (Top-Right) -->
+                        <div class="absolute -top-3 -right-3 sm:-right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-2xl shadow-lg border border-primary-200/60 flex items-center gap-2 transition-transform duration-300 hover:-translate-y-1">
+                            <span class="text-primary-500 text-xs"><i class="fas fa-code"></i></span>
+                            <span class="text-xs font-semibold text-primary-800 tracking-tight">.NET Developer</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -215,13 +235,8 @@
                 </p>
 
                 <div class="flex flex-wrap gap-4 justify-center">
-                    <a href="https://drive.google.com/file/d/1WpOGFakDhpVfbW0RhN05fjaA7qe-cirl/view?usp=sharing"
-                        target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center gap-2 px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-500/30">
-                        <i class="fas fa-download text-sm"></i> Download CV
-                    </a>
                     <a href="mailto:asiveacemathambeka@gmail.com"
-                        class="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary-500 text-primary-600 hover:bg-primary-50 font-semibold rounded-lg transition-all duration-300 hover:-translate-y-0.5">
+                        class="inline-flex items-center gap-2 px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-500/30">
                         <i class="fas fa-envelope text-sm"></i> Hire Me
                     </a>
                 </div>
@@ -399,7 +414,7 @@
                     <span class="text-primary-400">My</span> Portfolio
                 </h2>
                 <div class="mt-3 w-16 h-1 bg-primary-500 mx-auto rounded-full"></div>
-                <p class="mt-4 text-primary-500 text-sm italic">Download CV for extended project details</p>
+                <p class="mt-4 text-primary-500 text-sm">Selected production apps, dashboards, and workflow systems</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-10">
@@ -421,7 +436,33 @@
                     </div>
                     <div class="p-4">
                         <h3 class="font-bold text-primary-800 text-base">Flock Study</h3>
-                        <p class="text-primary-500 text-xs mt-1">Web Application</p>
+                        <p class="text-primary-500 text-xs mt-1">Flagship Platform • 80+ Users</p>
+                    </div>
+                </div>
+
+                <!-- Qoqosha -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-primary-200 hover:border-primary-500 shadow-sm transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative overflow-hidden h-44">
+                        <img src="img/qoqosha.png" alt="Qoqosha Kanban workspace dashboard"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-primary-700/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+                            <a href="https://qoqosha.asiven.co.za" target="_blank" rel="noopener noreferrer"
+                                class="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center text-white hover:bg-primary-400 transition-colors duration-200"
+                                title="Visit site">
+                                <i class="fas fa-external-link-alt text-sm"></i>
+                            </a>
+                            <a href="#case-studies"
+                                class="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center text-white hover:bg-primary-400 transition-colors duration-200"
+                                title="Case study">
+                                <i class="fas fa-diagram-project text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-primary-800 text-base">Qoqosha</h3>
+                        <p class="text-primary-500 text-xs mt-1">Workspace Management • Railway</p>
                     </div>
                 </div>
 
@@ -439,36 +480,37 @@
                                 title="GitHub">
                                 <i class="fab fa-github text-sm"></i>
                             </a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-primary-800 text-base">Koko Analytics</h3>
-                        <p class="text-primary-500 text-xs mt-1">Web Application</p>
-                    </div>
-                </div>
-
-        
-
-
-                <!-- QR Code Generator -->
-                <div
-                    class="group bg-white rounded-2xl overflow-hidden border border-primary-200 hover:border-primary-500 shadow-sm transition-all duration-300 hover:-translate-y-1">
-                    <div class="relative overflow-hidden h-44">
-                        <img src="img/QR.jpg" alt="QR Code Generator"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div
-                            class="absolute inset-0 bg-primary-700/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
-                            <a href="https://asivemasterace.github.io/QRCodeGenerator/" target="_blank"
-                                rel="noopener noreferrer"
+                            <a href="#case-studies"
                                 class="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center text-white hover:bg-primary-400 transition-colors duration-200"
-                                title="Live demo">
-                                <i class="fas fa-external-link-alt text-sm"></i>
+                                title="Case study">
+                                <i class="fas fa-diagram-project text-sm"></i>
                             </a>
                         </div>
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-primary-800 text-base">QR Code Generator</h3>
-                        <p class="text-primary-500 text-xs mt-1">Utility Tool</p>
+                        <h3 class="font-bold text-primary-800 text-base">Koko Analytics</h3>
+                        <p class="text-primary-500 text-xs mt-1">Analytics Dashboard • Clean Architecture</p>
+                    </div>
+                </div>
+
+                <!-- Digital Queueing Platform -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-primary-200 hover:border-primary-500 shadow-sm transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative overflow-hidden h-44">
+                        <img src="img/queue-platform.png" alt="Generic digital queueing platform dashboard"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-primary-700/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+                            <a href="#case-studies"
+                                class="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center text-white hover:bg-primary-400 transition-colors duration-200"
+                                title="Case study">
+                                <i class="fas fa-diagram-project text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-primary-800 text-base">Digital Queueing Platform</h3>
+                        <p class="text-primary-500 text-xs mt-1">SignalR • Reporting • Confidential</p>
                     </div>
                 </div>
 
@@ -489,6 +531,9 @@
                 <p class="mt-4 text-primary-600 max-w-2xl mx-auto text-sm sm:text-base">
                     A closer look at project goals, technical decisions, and outcomes delivered.
                 </p>
+                <p class="mt-3 text-primary-500 max-w-2xl mx-auto text-xs sm:text-sm italic">
+                    Some enterprise work is summarized at a high level to respect confidentiality and contract boundaries.
+                </p>
             </div>
 
             <div class="space-y-6">
@@ -497,7 +542,7 @@
                     class="bg-white rounded-2xl border border-primary-200 p-6 sm:p-7 shadow-sm hover:border-primary-500 transition-colors duration-300">
                     <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
                         <div>
-                            <p class="text-xs uppercase tracking-widest text-primary-500 font-bold mb-2">Web Platform
+                            <p class="text-xs uppercase tracking-widest text-primary-500 font-bold mb-2">Flagship Platform • 80+ Users
                             </p>
                             <h3 class="text-2xl font-extrabold text-primary-800">Flock Study</h3>
                         </div>
@@ -508,6 +553,10 @@
                                 class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">PostgreSQL</span>
                             <span
                                 class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">PWA</span>
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">80+ Users</span>
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">Role-Based Access</span>
                             <span
                                 class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">Tailwind </span>
                         </div>
@@ -523,26 +572,84 @@
                         <div>
                             <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Approach</h4>
                             <p class="text-primary-600 text-sm leading-relaxed">
-                                Designed a Progressive Web App where users can submit prayer requests, commit to praying
-                                weekly, and track daily progress through structured updates backed by a relational
-                                database.
+                                Designed a Progressive Web App with cookie authentication, role-based access, prayer
+                                commitments, devotion publishing workflows, and structured relational data.
                             </p>
                         </div>
                         <div>
                             <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Outcome</h4>
                             <p class="text-primary-600 text-sm leading-relaxed">
-                                Delivered a focused Bible study and prayer accountability platform that encourages
-                                consistency, community engagement, and measurable spiritual growth.
+                                Launched a live Bible study and prayer accountability platform serving 80+ users,
+                                encouraging consistency, community engagement, and measurable spiritual growth.
                             </p>
                         </div>
                     </div>
-                    <div class="mt-5">
+                    <div class="mt-5 flex flex-wrap items-center gap-3">
                         <a href="https://www.flockstudy.co.za" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-400 text-white text-sm font-semibold transition-colors duration-200">
                             <i class="fas fa-external-link-alt text-xs"></i> Visit Project
                         </a>
                         <button type="button" id="open-tech-modal" data-modal-target="tech-modal"
-                            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary-500 text-primary-600 hover:bg-primary-100 text-sm font-semibold transition-colors duration-200 ml-2 mt-2 sm:mt-0">
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary-500 text-primary-600 hover:bg-primary-100 text-sm font-semibold transition-colors duration-200">
+                            <i class="fas fa-diagram-project text-xs"></i> Technical Approach
+                        </button>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl border border-primary-200 p-6 sm:p-7 shadow-sm hover:border-primary-500 transition-colors duration-300">
+                    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-primary-500 font-bold mb-2">Productivity Platform
+                            </p>
+                            <h3 class="text-2xl font-extrabold text-primary-800">Qoqosha</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">.NET</span>
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">Railway</span>
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">Docker</span>
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">MySQL</span>
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">Kanban</span>
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">Role-Based Access</span>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-5 mt-5">
+                        <div>
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Challenge</h4>
+                            <p class="text-primary-600 text-sm leading-relaxed">
+                                Build a lightweight workspace system where teams can organize projects, manage members,
+                                and control access without the overhead of a large enterprise tool.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Approach</h4>
+                            <p class="text-primary-600 text-sm leading-relaxed">
+                                Developed a .NET application with cookie authentication, invite-based registration,
+                                Admin/Member/Client roles, workspace requests, project membership, and Kanban-style task
+                                views, then containerized it for Railway deployment.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Outcome</h4>
+                            <p class="text-primary-600 text-sm leading-relaxed">
+                                Delivered a production-hosted project management platform with protected project screens,
+                                role-aware member management, structured collaboration, and practical deployment ownership.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-5 flex flex-wrap items-center gap-3">
+                        <a href="https://qoqosha.asiven.co.za" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-400 text-white text-sm font-semibold transition-colors duration-200">
+                            <i class="fas fa-external-link-alt text-xs"></i> Visit Project
+                        </a>
+                        <button type="button" id="open-tech-modal-qoqosha" data-modal-target="tech-modal-qoqosha"
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary-500 text-primary-600 hover:bg-primary-100 text-sm font-semibold transition-colors duration-200">
                             <i class="fas fa-diagram-project text-xs"></i> Technical Approach
                         </button>
                     </div>
@@ -589,13 +696,13 @@
                             </p>
                         </div>
                     </div>
-                    <div class="mt-5">
+                    <div class="mt-5 flex flex-wrap items-center gap-3">
                         <a href="https://github.com/AsiveMasterAce/KokoAnalytics" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-400 text-white text-sm font-semibold transition-colors duration-200">
                             <i class="fab fa-github text-xs"></i> View Code
                         </a>
                         <button type="button" id="open-tech-modal-koko" data-modal-target="tech-modal-koko"
-                            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary-500 text-primary-600 hover:bg-primary-100 text-sm font-semibold transition-colors duration-200 ml-2 mt-2 sm:mt-0">
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary-500 text-primary-600 hover:bg-primary-100 text-sm font-semibold transition-colors duration-200">
                             <i class="fas fa-diagram-project text-xs"></i> Technical Approach
                         </button>
                     </div>
@@ -639,16 +746,59 @@
                             </p>
                         </div>
                     </div>
-                    <div class="mt-5">
-                        <a href="https://github.com/AsiveMasterAce/LactaFlowIQ" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-400 text-white text-sm font-semibold transition-colors duration-200">
-                            <i class="fab fa-github text-xs"></i> View Code
-                        </a>
+                    <div class="mt-5 flex flex-wrap items-center gap-3">
+                
                         <button type="button" id="open-tech-modal-lactaflow" data-modal-target="tech-modal-lactaflow"
-                            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary-500 text-primary-600 hover:bg-primary-100 text-sm font-semibold transition-colors duration-200 ml-2 mt-2 sm:mt-0">
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary-500 text-primary-600 hover:bg-primary-100 text-sm font-semibold transition-colors duration-200">
                             <i class="fas fa-diagram-project text-xs"></i> Technical Approach
                         </button>
                     </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl border border-primary-200 p-6 sm:p-7 shadow-sm hover:border-primary-500 transition-colors duration-300">
+                    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-primary-500 font-bold mb-2">Enterprise System
+                            </p>
+                            <h3 class="text-2xl font-extrabold text-primary-800">Digital Queueing Platform</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">.NET</span>
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">SignalR</span>
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">Caching</span>
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">Reporting</span>
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">PWA</span>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-5 mt-5">
+                        <div>
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Challenge</h4>
+                            <p class="text-primary-600 text-sm leading-relaxed">
+                                Support high-volume service environments where staff need accurate queue visibility, fast patient or client flow, and reliable operational reporting.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Approach</h4>
+                            <p class="text-primary-600 text-sm leading-relaxed">
+                                Contributed to a modular .NET system with queue services, real-time SignalR notifications, caching, report exports, and role-aware operational screens.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Outcome</h4>
+                            <p class="text-primary-600 text-sm leading-relaxed">
+                                Helped deliver a more responsive internal workflow where teams can monitor queues, capture service activity, and make daily operations easier to track.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="mt-5 text-xs text-primary-500 italic">
+                        Details generalized to respect contract and confidentiality boundaries.
+                    </p>
                 </article>
 
 
@@ -683,11 +833,11 @@
                     <div class="grid sm:grid-cols-3 gap-4">
                         <div class="bg-primary-50 border border-primary-200 rounded-xl p-4">
                             <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Architecture</h4>
-                            <p class="text-sm text-primary-700 leading-relaxed">Structured as an ASP.NET Core MVC app with clear separation of responsibilities to keep logic maintainable and testable.</p>
+                            <p class="text-sm text-primary-700 leading-relaxed">Structured as an ASP.NET Core MVC app with service-layer responsibilities, cookie authentication, and persisted data-protection keys for stable sessions across redeploys.</p>
                         </div>
                         <div class="bg-primary-50 border border-primary-200 rounded-xl p-4">
-                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Data Design</h4>
-                            <p class="text-sm text-primary-700 leading-relaxed">PostgreSQL models support requests, commitments, and progress history to ensure reliable tracking over time.</p>
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Access Model</h4>
+                            <p class="text-sm text-primary-700 leading-relaxed">Role-based access separates members, writers, editors, pending writers, and admins, with editor/admin approval flows for content and devotion publishing.</p>
                         </div>
                         <div class="bg-primary-50 border border-primary-200 rounded-xl p-4">
                             <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Delivery</h4>
@@ -698,9 +848,58 @@
                     <div>
                         <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-3">Implementation Flow</h4>
                         <ol class="space-y-3 text-sm text-primary-700 leading-relaxed">
-                            <li class="flex gap-3"><span class="w-6 h-6 shrink-0 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">1</span> Defined domain entities and relationships for requests, users, and weekly commitments.</li>
-                            <li class="flex gap-3"><span class="w-6 h-6 shrink-0 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">2</span> Built focused MVC views and validation pipelines to minimize friction during request submission.</li>
-                            <li class="flex gap-3"><span class="w-6 h-6 shrink-0 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">3</span> Added progress tracking and summary views so users can measure consistency and engagement.</li>
+                            <li class="flex gap-3"><span class="w-6 h-6 shrink-0 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">1</span> Defined domain entities and relationships for users, prayer requests, commitments, devotions, notifications, and roles.</li>
+                            <li class="flex gap-3"><span class="w-6 h-6 shrink-0 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">2</span> Built authenticated member flows plus admin/editor review screens for writer requests, devotion queues, and scheduled publishing.</li>
+                            <li class="flex gap-3"><span class="w-6 h-6 shrink-0 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">3</span> Added PWA support, push notifications, background reminders, and progress tracking to keep users engaged beyond a single visit.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== QOQOSHA TECHNICAL APPROACH MODAL ===== -->
+    <div id="tech-modal-qoqosha" class="fixed inset-0 z-[70] hidden" aria-hidden="true" data-modal>
+        <div id="tech-modal-backdrop-qoqosha" data-modal-backdrop class="absolute inset-0 bg-primary-900/60 opacity-0 transition-opacity duration-300"></div>
+
+        <div class="relative min-h-full flex items-end sm:items-center justify-center p-4">
+            <div id="tech-modal-panel-qoqosha" data-modal-panel
+                class="w-full max-w-3xl max-h-[90vh] flex flex-col rounded-2xl bg-white border border-primary-200 shadow-xl opacity-0 translate-y-6 sm:translate-y-8 scale-[0.98] transition-all duration-300"
+                role="dialog" aria-modal="true" aria-labelledby="tech-modal-title-qoqosha">
+
+                <div class="flex items-start justify-between gap-4 p-5 sm:p-6 border-b border-primary-200">
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-primary-500 font-bold">Qoqosha</p>
+                        <h3 id="tech-modal-title-qoqosha" class="text-2xl font-extrabold text-primary-800 mt-1">Technical Approach</h3>
+                    </div>
+                    <button type="button" id="close-tech-modal-qoqosha" data-modal-close aria-label="Close technical approach"
+                        class="w-10 h-10 rounded-lg border border-primary-200 text-primary-600 hover:text-primary-800 hover:bg-primary-50 transition-colors duration-200">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="p-5 sm:p-6 space-y-6 overflow-y-auto min-h-0">
+                    <div class="grid sm:grid-cols-3 gap-4">
+                        <div class="bg-primary-50 border border-primary-200 rounded-xl p-4">
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Architecture</h4>
+                            <p class="text-sm text-primary-700 leading-relaxed">Built as a .NET MVC application with cookie authentication, protected controllers, service abstractions, repository boundaries, and Entity Framework Core for persistence.</p>
+                        </div>
+                        <div class="bg-primary-50 border border-primary-200 rounded-xl p-4">
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Access Model</h4>
+                            <p class="text-sm text-primary-700 leading-relaxed">Invite-based membership supports Admin, Member, and Client roles, with owner/admin permissions for project updates, invitations, role changes, and member removal.</p>
+                        </div>
+                        <div class="bg-primary-50 border border-primary-200 rounded-xl p-4">
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Deployment</h4>
+                            <p class="text-sm text-primary-700 leading-relaxed">Containerized with Docker and hosted on Railway with MySQL/MariaDB support for production-style deployment and iteration.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-3">Implementation Flow</h4>
+                        <ol class="space-y-3 text-sm text-primary-700 leading-relaxed">
+                            <li class="flex gap-3"><span class="w-6 h-6 shrink-0 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">1</span> Modeled the core collaboration entities: users, workspaces, projects, memberships, workspace requests, and task items.</li>
+                            <li class="flex gap-3"><span class="w-6 h-6 shrink-0 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">2</span> Added protected project flows with owner/admin checks, invite-based registration, role changes, and member removal.</li>
+                            <li class="flex gap-3"><span class="w-6 h-6 shrink-0 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">3</span> Built Kanban-style task screens and prepared the app for live hosting with Docker, database configuration, and Railway conventions.</li>
                         </ol>
                     </div>
                 </div>
