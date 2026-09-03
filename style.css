@@ -27,3 +27,28 @@ body.modal-open {
     overflow: hidden;
 }
 
+/* Subtle tag variation for case-study badges */
+#case-studies article > div:first-child .flex.flex-wrap span:nth-child(4n + 1) {
+    background: #f6fcfd;
+    border-color: #c3e7f1;
+    color: #2f5e66;
+}
+
+#case-studies article > div:first-child .flex.flex-wrap span:nth-child(4n + 2) {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #334155;
+}
+
+#case-studies article > div:first-child .flex.flex-wrap span:nth-child(4n + 3) {
+    background: #fff7e0;
+    border-color: #ffe2a3;
+    color: #7a4f00;
+}
+
+#case-studies article > div:first-child .flex.flex-wrap span:nth-child(4n) {
+    background: #eff8f1;
+    border-color: #cce8d3;
+    color: #315f3b;
+}
+

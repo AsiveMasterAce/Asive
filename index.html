@@ -493,6 +493,32 @@
                     </div>
                 </div>
 
+                <!-- Just Creations -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-primary-200 hover:border-primary-500 shadow-sm transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative overflow-hidden h-44">
+                        <img src="img/just-creations.jpeg" alt="Just Creations luxury fashion brand platform"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-primary-700/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+                            <a href="https://www.justcreations.co.za" target="_blank" rel="noopener noreferrer"
+                                class="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center text-white hover:bg-primary-400 transition-colors duration-200"
+                                title="Visit site">
+                                <i class="fas fa-external-link-alt text-sm"></i>
+                            </a>
+                            <a href="#case-studies"
+                                class="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center text-white hover:bg-primary-400 transition-colors duration-200"
+                                title="Case study">
+                                <i class="fas fa-diagram-project text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-primary-800 text-base">Just Creations</h3>
+                        <p class="text-primary-500 text-xs mt-1">Curated Fashion • Nuxt 3 & Sanity CMS</p>
+                    </div>
+                </div>
+
                 <!-- Digital Queueing Platform -->
                 <div
                     class="group bg-white rounded-2xl overflow-hidden border border-primary-200 hover:border-primary-500 shadow-sm transition-all duration-300 hover:-translate-y-1">
@@ -590,6 +616,62 @@
                             <i class="fas fa-external-link-alt text-xs"></i> Visit Project
                         </a>
                         <button type="button" id="open-tech-modal" data-modal-target="tech-modal"
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary-500 text-primary-600 hover:bg-primary-100 text-sm font-semibold transition-colors duration-200">
+                            <i class="fas fa-diagram-project text-xs"></i> Technical Approach
+                        </button>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl border border-primary-200 p-6 sm:p-7 shadow-sm hover:border-primary-500 transition-colors duration-300">
+                    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-primary-500 font-bold mb-2">E-commerce Platform
+                            </p>
+                            <h3 class="text-2xl font-extrabold text-primary-800">Just Creations</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">Nuxt 3</span>
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">Sanity CMS</span>
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">Yoco Payments</span>
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">Webhooks</span>
+                            <span
+                                class="px-3 py-1 text-xs font-semibold rounded-full border border-primary-200 text-primary-700 bg-primary-50">Order Emails</span>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-5 mt-5">
+                        <div>
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Challenge</h4>
+                            <p class="text-primary-600 text-sm leading-relaxed">
+                                Build a boutique e-commerce experience where products, stock, customer details, and
+                                checkout could be managed without a heavy custom admin system.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Approach</h4>
+                            <p class="text-primary-600 text-sm leading-relaxed">
+                                Developed a Nuxt 3 storefront backed by Sanity CMS, with cart persistence, checkout
+                                validation, order records, Yoco payment checkout, and signed webhook handling.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Outcome</h4>
+                            <p class="text-primary-600 text-sm leading-relaxed">
+                                Delivered a content-managed online store with a complete order flow, secure payment
+                                integration, stock-aware product data, and customer/admin order notifications.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-5 flex flex-wrap items-center gap-3">
+                        <a href="https://www.justcreations.co.za" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-400 text-white text-sm font-semibold transition-colors duration-200">
+                            <i class="fas fa-external-link-alt text-xs"></i> Visit Project
+                        </a>
+                        <button type="button" id="open-tech-modal-just-creations" data-modal-target="tech-modal-just-creations"
                             class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary-500 text-primary-600 hover:bg-primary-100 text-sm font-semibold transition-colors duration-200">
                             <i class="fas fa-diagram-project text-xs"></i> Technical Approach
                         </button>
@@ -900,6 +982,55 @@
                             <li class="flex gap-3"><span class="w-6 h-6 shrink-0 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">1</span> Modeled the core collaboration entities: users, workspaces, projects, memberships, workspace requests, and task items.</li>
                             <li class="flex gap-3"><span class="w-6 h-6 shrink-0 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">2</span> Added protected project flows with owner/admin checks, invite-based registration, role changes, and member removal.</li>
                             <li class="flex gap-3"><span class="w-6 h-6 shrink-0 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">3</span> Built Kanban-style task screens and prepared the app for live hosting with Docker, database configuration, and Railway conventions.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== JUST CREATIONS TECHNICAL APPROACH MODAL ===== -->
+    <div id="tech-modal-just-creations" class="fixed inset-0 z-[70] hidden" aria-hidden="true" data-modal>
+        <div id="tech-modal-backdrop-just-creations" data-modal-backdrop class="absolute inset-0 bg-primary-900/60 opacity-0 transition-opacity duration-300"></div>
+
+        <div class="relative min-h-full flex items-end sm:items-center justify-center p-4">
+            <div id="tech-modal-panel-just-creations" data-modal-panel
+                class="w-full max-w-3xl max-h-[90vh] flex flex-col rounded-2xl bg-white border border-primary-200 shadow-xl opacity-0 translate-y-6 sm:translate-y-8 scale-[0.98] transition-all duration-300"
+                role="dialog" aria-modal="true" aria-labelledby="tech-modal-title-just-creations">
+
+                <div class="flex items-start justify-between gap-4 p-5 sm:p-6 border-b border-primary-200">
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-primary-500 font-bold">Just Creations</p>
+                        <h3 id="tech-modal-title-just-creations" class="text-2xl font-extrabold text-primary-800 mt-1">Technical Approach</h3>
+                    </div>
+                    <button type="button" id="close-tech-modal-just-creations" data-modal-close aria-label="Close technical approach"
+                        class="w-10 h-10 rounded-lg border border-primary-200 text-primary-600 hover:text-primary-800 hover:bg-primary-50 transition-colors duration-200">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="p-5 sm:p-6 space-y-6 overflow-y-auto min-h-0">
+                    <div class="grid sm:grid-cols-3 gap-4">
+                        <div class="bg-primary-50 border border-primary-200 rounded-xl p-4">
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Storefront</h4>
+                            <p class="text-sm text-primary-700 leading-relaxed">Built with Nuxt 3, TypeScript, Tailwind, reusable product components, cart state, recently viewed items, and checkout-specific layouts.</p>
+                        </div>
+                        <div class="bg-primary-50 border border-primary-200 rounded-xl p-4">
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">CMS Model</h4>
+                            <p class="text-sm text-primary-700 leading-relaxed">Sanity schemas manage products, categories, stock quantities, images with alt text, customer orders, delivery details, and payment status.</p>
+                        </div>
+                        <div class="bg-primary-50 border border-primary-200 rounded-xl p-4">
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-2">Payments</h4>
+                            <p class="text-sm text-primary-700 leading-relaxed">Yoco checkout and signed webhook verification update order status, reduce stock after payment, and trigger customer/admin email notifications.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-bold uppercase tracking-wide text-primary-500 mb-3">Implementation Flow</h4>
+                        <ol class="space-y-3 text-sm text-primary-700 leading-relaxed">
+                            <li class="flex gap-3"><span class="w-6 h-6 shrink-0 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">1</span> Modeled product, category, and order documents in Sanity so non-technical store owners can manage content and stock.</li>
+                            <li class="flex gap-3"><span class="w-6 h-6 shrink-0 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">2</span> Built cart and checkout flows with validation, persisted customer details, delivery capture, and server-side order creation.</li>
+                            <li class="flex gap-3"><span class="w-6 h-6 shrink-0 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">3</span> Integrated Yoco payments, verified webhook signatures, fulfilled paid orders, and sent order updates through Resend email utilities.</li>
                         </ol>
                     </div>
                 </div>
